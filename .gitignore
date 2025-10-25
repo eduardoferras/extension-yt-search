@@ -1,0 +1,22 @@
+# dev/build outputs
+/dist
+
+# Node dependencies
+/node_modules
+
+# Test coverage
+/coverage
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+**/*.Identifier
+
+# vscode
+.vscode/*
+!.vscode/extensions.json
