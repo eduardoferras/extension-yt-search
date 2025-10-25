@@ -1,6 +1,6 @@
 # YouTube Search Extension
 
-Extensão do Google Chrome para buscar conteúdos textuais no YouTube diretamente do menu de contexto.
+Context menu to search selected text on Youtube.
 
 ## Technologies
 
