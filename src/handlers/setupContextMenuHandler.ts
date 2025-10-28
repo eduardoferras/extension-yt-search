@@ -1,10 +1,12 @@
 import { YOUTUBE_CONTEXT_MENU_ID } from '@/constants/contextMenu'
-import buildYoutubeSearchUrl from '@/utils/buildYoutubeSearchUrl'
+import getYoutubeSearchUrl from '@/utils/getYoutubeSearchUrl'
+import openTab from '@/utils/openTab'
 
-export function setupContextMenuHandler() {
+export default function setupContextMenuHandler() {
 	chrome.contextMenus.onClicked.addListener((info) => {
 		if (info.menuItemId === YOUTUBE_CONTEXT_MENU_ID && info.selectionText) {
-			buildYoutubeSearchUrl(info.selectionText)
+			const youtubeSearchUrl = getYoutubeSearchUrl(info.selectionText)
+			openTab(youtubeSearchUrl)
 		}
 	})
 }
